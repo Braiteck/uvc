@@ -115,6 +115,44 @@ $(function(){
 	})
 
 
+	// Fancybox
+	$.fancybox.defaults.hash             = false
+	$.fancybox.defaults.backFocus        = false
+	$.fancybox.defaults.autoFocus        = false
+	$.fancybox.defaults.animationEffect  = 'zoom'
+	$.fancybox.defaults.transitionEffect = 'slide'
+	$.fancybox.defaults.speed            = 500
+	$.fancybox.defaults.gutter           = 40
+	$.fancybox.defaults.i18n             = {
+		'en': {
+			CLOSE       : "Закрыть",
+			NEXT        : "Следующий",
+			PREV        : "Предыдущий",
+			ERROR       : "Запрошенный контент не может быть загружен.<br /> Пожалуйста, повторите попытку позже.",
+			PLAY_START  : "Запустить слайдшоу",
+			PLAY_STOP   : "Остановить слайдшоу",
+			FULL_SCREEN : "На весь экран",
+			THUMBS      : "Миниатюры",
+			DOWNLOAD    : "Скачать",
+			SHARE       : "Поделиться",
+			ZOOM        : "Увеличить"
+		}
+	}
+
+	// Всплывающие окна
+	$('body').on('click', '.modal_link', function(e) {
+		e.preventDefault()
+
+		$.fancybox.close(true)
+
+		$.fancybox.open({
+			src   : $(this).data('content'),
+			type  : 'inline',
+			touch : false
+		})
+	})
+
+
 	// Моб. версия
 	if( $(window).width() < 360 ){
 		$('meta[name=viewport]').attr('content', 'width=360px, user-scalable=no, minimum-scale=1, maximum-scale=1')

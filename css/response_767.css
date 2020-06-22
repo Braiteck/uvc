@@ -640,4 +640,34 @@
 
         background-size: auto 100%;
     }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .fancybox-slide--html
+    {
+        padding: 20px;
+    }
+
+    .fancybox-slide--html .fancybox-close-small
+    {
+        top: 4px;
+        right: 4px;
+    }
+
+
+    .modal
+    {
+        padding: 40px;
+    }
+
+    .modal_title
+    {
+        font-size: 26px;
+        line-height: 30px;
+
+        margin-bottom: 35px;
+    }
 }

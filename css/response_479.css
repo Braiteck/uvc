@@ -1,8 +1,8 @@
 @media (max-width: 479px)
 {
     /*---------------
-	    Main styles
-	---------------*/
+        Main styles
+    ---------------*/
     :root
     {
         --font_size_title: 25px;
@@ -81,8 +81,8 @@
 
 
     /*---------------
-		Header
-	---------------*/
+        Header
+    ---------------*/
     .mob_header .logo a,
     .mob_header .logo img
     {
@@ -108,8 +108,8 @@
 
 
     /*---------------
-		Sidebar
-	---------------*/
+        Sidebar
+    ---------------*/
     aside .block_title
     {
         font-size: 24px;
@@ -131,8 +131,8 @@
 
 
     /*---------------
-		Main section
-	---------------*/
+        Main section
+    ---------------*/
     .first_section .info
     {
         font-size: 17px;
@@ -391,8 +391,8 @@
 
 
     /*---------------
-		Footer
-	---------------*/
+        Footer
+    ---------------*/
     footer .info
     {
         padding: 35px 0;
@@ -410,5 +410,23 @@
     {
         font-size: 13px;
         line-height: 19px;
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .modal
+    {
+        padding: 50px 30px 30px;
+    }
+
+    .modal_title
+    {
+        font-size: 22px;
+        line-height: 26px;
+
+        margin-bottom: 25px;
     }
 }

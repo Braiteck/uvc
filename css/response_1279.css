@@ -1,8 +1,8 @@
 @media (max-width: 1279px)
 {
     /*---------------
-	    Main styles
-	---------------*/
+        Main styles
+    ---------------*/
     :root
     {
         --aside_width: 240px;
@@ -102,8 +102,8 @@
 
 
     /*---------------
-		Header
-	---------------*/
+        Header
+    ---------------*/
     header .logo a,
     header .logo img
     {
@@ -133,8 +133,8 @@
 
 
     /*---------------
-		Sidebar
-	---------------*/
+        Sidebar
+    ---------------*/
     aside .block_title
     {
         font-size: 26px;
@@ -146,8 +146,8 @@
 
 
     /*---------------
-		Main section
-	---------------*/
+        Main section
+    ---------------*/
     .first_section .cont
     {
         min-height: 500px;
@@ -503,8 +503,8 @@
 
 
     /*---------------
-		Footer
-	---------------*/
+        Footer
+    ---------------*/
     footer .menu
     {
         width: calc(100% - 230px);
@@ -519,5 +519,21 @@
         line-height: 24px;
 
         padding: 15px 0;
+    }
+
+
+
+    /*-----------
+        PopUp
+    -----------*/
+    .fancybox-slide--html
+    {
+        padding: 30px;
+    }
+
+
+    .modal
+    {
+        width: 800px;
     }
 }

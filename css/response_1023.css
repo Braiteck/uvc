@@ -153,9 +153,11 @@
 
     #search_modal
     {
-        top: -7px;
+        top: calc(100% + 7px);
         right: auto;
-        left: -7px;
+        left: -20px;
+
+        width: 310px;
     }
 
 

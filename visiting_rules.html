@@ -26,6 +26,7 @@
 		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
 
 		<!-- Подключение файлов стилей -->
+		<link rel="stylesheet" href="css/fancybox.css">
 		<link rel="stylesheet" href="css/styles.css">
 
 		<link rel="stylesheet" href="css/response_1279.css" media="(max-width: 1279px)">
@@ -59,18 +60,20 @@
 									</button>
 
 									<div class="mini_modal" id="search_modal">
-										<form action="">
-											<svg class="icon">
-												<use xlink:href="images/sprite.svg#ic_search"></use>
-											</svg>
+										<div class="title">ПОИСК ПО САЙТУ</div>
 
+										<form action="">
 											<input type="text" name="" value="" class="input" placeholder="Я ищу...">
 
-											<button class="close">
-												<span></span>
-												<span></span>
+											<button type="submit" class="submit_btn">
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_search"></use></svg>
 											</button>
 										</form>
+
+										<button class="close">
+											<span></span>
+											<span></span>
+										</button>
 									</div>
 								</div>
 
@@ -120,7 +123,7 @@
 									</div>
 								</nav>
 
-								<button class="buy_link">Купить билет</button>
+								<button class="buy_link modal_link" data-content="#order_modal">Купить билет</button>
 
 							</div>
 						</div>
@@ -137,7 +140,7 @@
 							</a>
 						</div>
 
-						<button class="buy_link">Купить билет</button>
+						<button class="buy_link modal_link" data-content="#order_modal">Купить билет</button>
 
 						<button type="button" class="mob_menu_link">
 							<span></span>
@@ -257,7 +260,7 @@
 						</div>
 
 
-						<button class="buy_link">Купить билет</button>
+						<button class="buy_link modal_link" data-content="#order_modal">Купить билет</button>
 
 					</div>
 				</div>
@@ -289,11 +292,58 @@
 		</div>
 
 
+		<section class="modal" id="order_modal">
+			<div class="modal_title">Отправить заявку</div>
+
+			<form action="" class="form">
+				<div class="line">
+					<div class="field">
+						<input type="text" name="" value="" class="input" placeholder="Ваше имя">
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="field">
+						<input type="email" name="" value="" class="input" placeholder="Ваш e-mail">
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="field">
+						<input type="tel" name="" value="" class="input" placeholder="Телефон">
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="field">
+						<select name="">
+							<option value="0" data-display="ОТдел"></option>
+							<option value="1">Вариант 1</option>
+							<option value="2">Вариант 2</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="field">
+						<textarea name="" placeholder="Сообщение"></textarea>
+					</div>
+				</div>
+
+
+				<div class="submit">
+					<button type="submit" class="submit_btn">Отправить</button>
+				</div>
+			</form>
+		</section>
+
+
 		<!-- Подключение javascript файлов -->
 		<script src="js/jquery-3.4.1.min.js"></script>
 		<script src="js/jquery-migrate-1.4.1.min.js"></script>
 		<script src="js/lozad.min.js"></script>
 		<script src="js/inputmask.min.js"></script>
+		<script src="js/fancybox.min.js"></script>
 		<script src="js/nice-select.js"></script>
 		<script src="js/functions.js"></script>
 	</body>
