@@ -375,6 +375,36 @@
 
 
 
+    .calendar .filter .form .label
+    {
+        font-size: 14px;
+
+        padding-right: 15px;
+    }
+
+
+    .calendar .days .day,
+    .calendar .days .month
+    {
+        min-height: 150px;
+        padding: 15px 15px 56px;
+    }
+
+    .calendar .days .day .date
+    {
+        font-size: 16px;
+        line-height: 22px;
+    }
+
+    .calendar .days .day .status
+    {
+        font-size: 10px;
+
+        left: 15px;
+    }
+
+
+
     .load_more
     {
         margin-top: 30px;
@@ -428,5 +458,25 @@
         line-height: 26px;
 
         margin-bottom: 25px;
+    }
+
+
+
+    #calendar_day_info_modal
+    {
+        padding: 30px;
+    }
+
+    #calendar_day_info_modal .date
+    {
+        font-size: 22px;
+        line-height: 26px;
+    }
+
+
+    #calendar_day_info_modal .event .name
+    {
+        font-size: 17px;
+        line-height: 23px;
     }
 }

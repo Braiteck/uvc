@@ -570,6 +570,43 @@
 
 
 
+    .calendar .filter .form .line
+    {
+        margin-bottom: 15px;
+    }
+
+    .calendar .filter .form .room,
+    .calendar .filter .form .date,
+    .calendar .filter .form .submit
+    {
+        width: 100%;
+    }
+
+    .calendar .filter .form .submit
+    {
+        margin-top: 0;
+    }
+
+
+    .calendar .days > *
+    {
+        width: calc(50% + 1px);
+    }
+
+
+    .calendar .days .day,
+    .calendar .days .month
+    {
+        padding: 14px 19px 56px;
+    }
+
+    .calendar .days .day .status
+    {
+        left: 19px;
+    }
+
+
+
     .grid_lines .line
     {
         width: 25%;
@@ -669,5 +706,39 @@
         line-height: 30px;
 
         margin-bottom: 35px;
+    }
+
+
+
+    #calendar_day_info_modal
+    {
+        padding: 40px;
+    }
+
+    #calendar_day_info_modal .date
+    {
+        font-size: 26px;
+        line-height: 30px;
+    }
+
+
+    #calendar_day_info_modal .event
+    {
+        padding: 20px;
+    }
+
+    #calendar_day_info_modal .event .name
+    {
+        font-size: 18px;
+        line-height: 23px;
+    }
+
+    #calendar_day_info_modal .event .btn
+    {
+        position: relative;
+        right: 0;
+
+        width: 250px;
+        margin: 15px 0 0;
     }
 }

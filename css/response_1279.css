@@ -487,6 +487,42 @@
 
 
 
+    .calendar .filter
+    {
+        margin-bottom: 30px;
+        padding: 20px 25px;
+    }
+
+    .calendar .filter .form .room
+    {
+        width: calc(50% - 30px);
+    }
+
+    .calendar .filter .form .date
+    {
+        width: calc(33% - 30px);
+    }
+
+    .calendar .filter .form .submit
+    {
+        width: 17%;
+    }
+
+    .calendar .filter .form .submit_btn
+    {
+        font-size: 16px;
+
+        padding: 0 20px;
+    }
+
+
+    .calendar .days > *
+    {
+        width: calc(25% + 1px);
+    }
+
+
+
     .load_more
     {
         margin-top: 50px;

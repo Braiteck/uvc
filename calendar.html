@@ -1,0 +1,509 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<!-- Переключение IE в последнию версию, на случай если в настройках пользователя стоит меньшая -->
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+		<!-- Адаптирование страницы для мобильных устройств -->
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+		<!-- Запрет распознования номера телефона -->
+		<meta name="format-detection" content="telephone=no">
+		<meta name="SKYPE_TOOLBAR" content ="SKYPE_TOOLBAR_PARSER_COMPATIBLE">
+
+		<!-- Заголовок страницы -->
+		<title>Заголовок страницы</title>
+
+		<!-- Данное значение часто используют(использовали) поисковые системы -->
+		<meta name="description" content="">
+		<meta name="keywords" content="">
+
+		<!-- Традиционная иконка сайта, размер 16x16, прозрачность поддерживается. Рекомендуемый формат: .ico или .png -->
+		<link rel="shortcut icon" href="images/favicon.ico">
+
+		<!-- Подключение шрифтов с гугла -->
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+
+		<!-- Подключение файлов стилей -->
+		<link rel="stylesheet" href="css/fancybox.css">
+		<link rel="stylesheet" href="css/styles.css">
+
+		<link rel="stylesheet" href="css/response_1279.css" media="(max-width: 1279px)">
+		<link rel="stylesheet" href="css/response_1023.css" media="(max-width: 1023px)">
+		<link rel="stylesheet" href="css/response_767.css" media="(max-width: 767px)">
+		<link rel="stylesheet" href="css/response_479.css" media="(max-width: 479px)">
+	</head>
+
+	<body>
+		<div class="wrap">
+			<div class="main">
+				<!-- Шапка -->
+				<header class="inner">
+					<button type="button" class="close">
+						<span></span>
+						<span></span>
+					</button>
+
+
+					<div class="mob_scroll">
+						<div class="top">
+							<div class="cont flex">
+
+								<div class="slogan">информационно-выставочный центр</div>
+
+								<div class="search modal_cont">
+									<button class="link mini_modal_link" data-modal-id="#search_modal">
+										<svg class="icon">
+											<use xlink:href="images/sprite.svg#ic_search"></use>
+										</svg>
+									</button>
+
+									<div class="mini_modal" id="search_modal">
+										<div class="title">ПОИСК ПО САЙТУ</div>
+
+										<form action="">
+											<input type="text" name="" value="" class="input" placeholder="Я ищу...">
+
+											<button type="submit" class="submit_btn">
+												<svg class="icon"><use xlink:href="images/sprite.svg#ic_search"></use></svg>
+											</button>
+										</form>
+
+										<button class="close">
+											<span></span>
+											<span></span>
+										</button>
+									</div>
+								</div>
+
+								<a href="/" class="visually_impaired">
+									<svg class="icon">
+										<use xlink:href="images/sprite.svg#ic_visually_impaired"></use>
+									</svg>
+								</a>
+
+								<div class="langs">
+									<a href="/">En</a>
+									<a class="active">RU</a>
+								</div>
+
+							</div>
+						</div>
+
+
+						<div class="info">
+							<div class="cont flex">
+
+								<div class="logo">
+									<a href="/">
+										<img src="images/logo.png" alt="">
+									</a>
+								</div>
+
+								<nav class="menu flex">
+									<div class="item">
+										<a href="/" class="sub_link">о нас</a>
+
+										<div class="sub_menu">
+											<div><a href="/">история</a></div>
+											<div><a href="/">услуги</a></div>
+											<div><a href="/">чем заняться</a></div>
+											<div><a href="/">правила</a></div>
+											<div><a href="/">частые вопросы</a></div>
+										</div>
+									</div>
+
+									<div class="item">
+										<a href="/">контакты</a>
+									</div>
+
+									<div class="item">
+										<a href="/">сотрудничество</a>
+									</div>
+								</nav>
+
+								<button class="buy_link modal_link" data-content="#order_modal">Купить билет</button>
+
+							</div>
+						</div>
+					</div>
+				</header>
+
+
+				<div class="mob_header">
+					<div class="cont">
+
+						<div class="logo">
+							<a href="/">
+								<img src="images/logo.png" alt="">
+							</a>
+						</div>
+
+						<button class="buy_link modal_link" data-content="#order_modal">Купить билет</button>
+
+						<button type="button" class="mob_menu_link">
+							<span></span>
+							<span></span>
+							<span></span>
+						</button>
+
+					</div>
+				</div>
+				<!-- End Шапка -->
+
+
+				<!-- Основная часть -->
+				<section class="page_head">
+					<div class="cont">
+
+						<div class="breadcrumbs">
+							<a href="/">Главная</a> <span class="sep"></span>
+							Календарь
+						</div>
+
+						<h1 class="page_title">Календарь</h1>
+
+					</div>
+				</section>
+
+
+				<section class="calendar block">
+					<div class="cont">
+
+						<div class="filter">
+							<form action="" class="form">
+								<div class="line room">
+									<div class="label">Помещение</div>
+
+									<div class="field">
+										<select name="">
+											<option value="0" selected>Все</option>
+											<option value="1">Вариант 1</option>
+											<option value="2">Вариант 2</option>
+											<option value="3">Вариант 3</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="line date">
+									<div class="label">месяц</div>
+
+									<div class="field">
+										<select name="">
+											<option value="1" selected>Июнь 2020</option>
+											<option value="2">Июль 2020</option>
+											<option value="3">Август 2020</option>
+											<option value="4">Сентябрь 2020</option>
+										</select>
+									</div>
+								</div>
+
+								<div class="submit">
+									<button type="submit" class="submit_btn">Применить</button>
+								</div>
+							</form>
+						</div>
+
+
+						<div class="days">
+							<div class="month">
+								ИЮНЬ<br> 2020
+								<div class="number">06</div>
+							</div>
+
+							<div class="day">
+								<div class="date">1 июня</div>
+
+								<div class="status green">Свободно</div>
+							</div>
+
+							<div class="day">
+								<div class="date">2 июня</div>
+
+								<div class="event">Экскурсия для учащихся школ г. Тамбов</div>
+
+								<div class="status red">зарезервировано</div>
+							</div>
+
+							<div class="day clickable modal_link" data-content="#calendar_day_info_modal">
+								<div class="date">3 июня</div>
+
+								<div class="status yellow">Выберите зал</div>
+							</div>
+
+							<div class="day">
+								<div class="date">4 июня</div>
+
+								<div class="status green">Свободно</div>
+							</div>
+
+							<div class="day">
+								<div class="date">5 июня</div>
+
+								<div class="status green">Свободно</div>
+							</div>
+
+							<div class="day">
+								<div class="date">6 июня</div>
+
+								<div class="event">Экскурсия для учащихся школ г. Тамбов</div>
+
+								<div class="status red">зарезервировано</div>
+							</div>
+
+							<div class="day clickable modal_link" data-content="#calendar_day_info_modal">
+								<div class="date">7 июня</div>
+
+								<div class="status yellow">Выберите зал</div>
+							</div>
+
+							<div class="day">
+								<div class="date">8 июня</div>
+
+								<div class="status green">Свободно</div>
+							</div>
+
+							<div class="day">
+								<div class="date">9 июня</div>
+
+								<div class="status green">Свободно</div>
+							</div>
+
+							<div class="day">
+								<div class="date">10 июня</div>
+
+								<div class="status green">Свободно</div>
+							</div>
+
+							<div class="day clickable modal_link" data-content="#calendar_day_info_modal">
+								<div class="date">11 июня</div>
+
+								<div class="status yellow">Выберите зал</div>
+							</div>
+
+							<div class="day">
+								<div class="date">12 июня</div>
+
+								<div class="status green">Свободно</div>
+							</div>
+
+							<div class="day">
+								<div class="date">13 июня</div>
+
+								<div class="status green">Свободно</div>
+							</div>
+
+							<div class="day">
+								<div class="date">14 июня</div>
+
+								<div class="status green">Свободно</div>
+							</div>
+
+							<div class="day">
+								<div class="date">15 июня</div>
+
+								<div class="status green">Свободно</div>
+							</div>
+
+							<div class="day clickable modal_link" data-content="#calendar_day_info_modal">
+								<div class="date">16 июня</div>
+
+								<div class="status yellow">Выберите зал</div>
+							</div>
+
+							<div class="day">
+								<div class="date">17 июня</div>
+
+								<div class="status green">Свободно</div>
+							</div>
+
+							<div class="day">
+								<div class="date">18 июня</div>
+
+								<div class="status green">Свободно</div>
+							</div>
+
+							<div class="day">
+								<div class="date">19 июня</div>
+
+								<div class="status green">Свободно</div>
+							</div>
+
+							<div class="day">
+								<div class="date">20 июня</div>
+
+								<div class="status green">Свободно</div>
+							</div>
+
+							<div class="day clickable modal_link" data-content="#calendar_day_info_modal">
+								<div class="date">21 июня</div>
+
+								<div class="status yellow">Выберите зал</div>
+							</div>
+
+							<div class="day">
+								<div class="date">22 июня</div>
+
+								<div class="status green">Свободно</div>
+							</div>
+
+							<div class="day">
+								<div class="date">23 июня</div>
+
+								<div class="status green">Свободно</div>
+							</div>
+
+							<div class="day">
+								<div class="date">24 июня</div>
+
+								<div class="status green">Свободно</div>
+							</div>
+						</div>
+
+					</div>
+				</section>
+				<!-- End Основная часть -->
+			</div>
+
+
+			<!-- Подвал -->
+			<footer>
+				<div class="info">
+					<div class="cont flex">
+
+						<div class="menu">
+							<div><a href="/">Информационно-выставочный центр</a></div>
+							<div><a href="/">Новости</a></div>
+							<div><a href="/">История</a></div>
+							<div><a href="/">Партнеры</a></div>
+							<div><a href="/">Сотрудничество</a></div>
+							<div><a href="/">Для туристических фирм</a></div>
+							<div><a href="/">Вакансии</a></div>
+							<div><a href="/">Посещение</a></div>
+							<div><a href="/">Услуги</a></div>
+							<div><a href="/">Билеты</a></div>
+							<div><a href="/">Чем заняться</a></div>
+							<div><a href="/">Правила посещения</a></div>
+							<div><a href="/">Частые вопросы</a></div>
+							<div><a href="/">Контакты</a></div>
+						</div>
+
+
+						<button class="buy_link modal_link" data-content="#order_modal">Купить билет</button>
+
+					</div>
+				</div>
+
+
+				<div class="bottom">
+					<div class="cont flex">
+
+						<div class="copyright">
+							&copy; 2019, ПАО Пигмент, Все права защищены
+						</div>
+
+
+						<div class="creator">
+							<a href="/" target="_blank" rel="noopener">Разработка сайта — Red Company</a>
+						</div>
+
+					</div>
+				</div>
+			</footer>
+			<!-- End Подвал -->
+		</div>
+
+
+		<div class="overlay"></div>
+
+		<div class="supports_error">
+			Ваш браузер устарел рекомендуем обновить его до последней версии<br> или использовать другой более современный.
+		</div>
+
+
+		<section class="modal" id="order_modal">
+			<div class="modal_title">Отправить заявку</div>
+
+			<form action="" class="form">
+				<div class="line">
+					<div class="field">
+						<input type="text" name="" value="" class="input" placeholder="Ваше имя">
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="field">
+						<input type="email" name="" value="" class="input" placeholder="Ваш e-mail">
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="field">
+						<input type="tel" name="" value="" class="input" placeholder="Телефон">
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="field">
+						<select name="">
+							<option value="0" data-display="ОТдел"></option>
+							<option value="1">Вариант 1</option>
+							<option value="2">Вариант 2</option>
+						</select>
+					</div>
+				</div>
+
+				<div class="line">
+					<div class="field">
+						<textarea name="" placeholder="Сообщение"></textarea>
+					</div>
+				</div>
+
+
+				<div class="submit">
+					<button type="submit" class="submit_btn">Отправить</button>
+				</div>
+			</form>
+		</section>
+
+
+		<section class="modal" id="calendar_day_info_modal">
+			<div class="date">7 июня 2020</div>
+
+			<div class="events">
+				<div class="event">
+					<div class="name">Экскурсионная программа</div>
+
+					<div class="status green">Свободно</div>
+
+					<div class="btn">Забронировать</div>
+				</div>
+
+				<div class="event">
+					<div class="name">Лабаратория</div>
+
+					<div class="status green">Свободно</div>
+
+					<div class="btn">Забронировать</div>
+				</div>
+
+				<div class="event">
+					<div class="name">Кинозал</div>
+
+					<div class="status red">Свободно</div>
+				</div>
+			</div>
+		</section>
+
+
+		<!-- Подключение javascript файлов -->
+		<script src="js/jquery-3.4.1.min.js"></script>
+		<script src="js/jquery-migrate-1.4.1.min.js"></script>
+		<script src="js/lozad.min.js"></script>
+		<script src="js/inputmask.min.js"></script>
+		<script src="js/fancybox.min.js"></script>
+		<script src="js/nice-select.js"></script>
+		<script src="js/functions.js"></script>
+	</body>
+</html>

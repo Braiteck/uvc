@@ -518,6 +518,7 @@ body.lock
 .form .nice-select .current:after
 {
     position: absolute;
+    z-index: 10;
     top: -6px;
     right: 23px;
     bottom: 0;
@@ -539,14 +540,13 @@ body.lock
 {
     position: absolute;
     z-index: 9;
-    top: calc(100% + 30px);
+    top: 0;
     left: 0;
 
     visibility: hidden;
     overflow: hidden;
 
     min-width: 100%;
-    padding: 5px 0;
 
     transition: .2s linear;
 
@@ -554,12 +554,11 @@ body.lock
     border: 1px solid var(--form_border_color);
     border-radius: var(--form_border_radius);
     background: var(--form_bg_color);
+    box-shadow: 0 5px 24px 0 rgba(0, 9, 80, .11);
 }
 
 .form .nice-select.open .list
 {
-    top: calc(100% + 1px);
-
     visibility: visible;
 
     opacity: 1;
@@ -574,10 +573,14 @@ body.lock
 
 .form .nice-select .list .list_item
 {
-    padding: 10px 27px;
+    color: var(--form_placeholder_color);
+    line-height: 45px;
+
+    padding: 0 27px;
 
     cursor: pointer;
     transition: color .2s linear;
+    text-transform: uppercase;
 }
 
 .form .nice-select .list .list_item:empty
@@ -3371,6 +3374,226 @@ aside .links a.active
 
 
 
+.calendar .filter
+{
+    margin-bottom: 40px;
+    padding: 25px 38px;
+
+    background: #edf4fb;
+}
+
+.calendar .filter .form
+{
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.calendar .filter .form .line
+{
+    display: flex;
+
+    margin-bottom: 0;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+.calendar .filter .form .label
+{
+    font-size: 16px;
+    font-weight: 700;
+
+    padding-right: 20px;
+
+    text-transform: uppercase;
+}
+
+.calendar .filter .form .field
+{
+    width: 100%;
+}
+
+.calendar .filter .form .room
+{
+    width: calc(53% - 40px);
+}
+
+.calendar .filter .form .date
+{
+    width: calc(29% - 40px);
+}
+
+.calendar .filter .form .submit
+{
+    width: 18%;
+    padding: 0;
+}
+
+.calendar .filter .form .submit_btn
+{
+    font-weight: 700;
+    line-height: 45px;
+
+    height: 45px;
+    padding-top: 1px;
+}
+
+
+
+.calendar .days
+{
+    display: flex;
+
+    padding-bottom: 1px;
+    padding-left: 1px;
+
+    justify-content: flex-start;
+    align-items: stretch;
+    align-content: stretch;
+    flex-wrap: wrap;
+}
+
+.calendar .days > *
+{
+    width: calc(20% + 1px);
+    min-height: 170px;
+    margin-bottom: -1px;
+    margin-left: -1px;
+}
+
+
+.calendar .days .month
+{
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    padding: 19px 24px;
+
+    text-transform: uppercase;
+
+    background: #005ca1;
+}
+
+.calendar .days .month .number
+{
+    font-size: 114px;
+    line-height: 100px;
+
+    position: absolute;
+    right: -5px;
+    bottom: -10px;
+
+    white-space: nowrap;
+
+    opacity: .03;
+}
+
+
+.calendar .days .day
+{
+    position: relative;
+
+    padding: 19px 24px 56px;
+
+    transition: .2s linear;
+
+    border: 1px solid #e3e3e3;
+}
+
+.calendar .days .day .date
+{
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+
+    text-transform: uppercase;
+}
+
+.calendar .days .day .event
+{
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 20px;
+
+    margin-top: 5px;
+}
+
+.calendar .days .day .status
+{
+    color: rgba(57,57,57,.5);
+    font-size: 14px;
+    font-weight: 700;
+
+    position: absolute;
+    bottom: 19px;
+    left: 24px;
+
+    padding-left: 17px;
+
+    text-transform: uppercase;
+}
+
+.calendar .days .day .status:before
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 10px;
+    height: 10px;
+    margin: auto;
+
+    content: '';
+
+    border-radius: 50%;
+}
+
+.calendar .days .day .status.green:before
+{
+    background: #58cc3d;
+}
+
+.calendar .days .day .status.yellow:before
+{
+    background: #e7ca1f;
+}
+
+.calendar .days .day .status.red:before
+{
+    background: #f34840;
+}
+
+
+.calendar .days .day.clickable
+{
+    cursor: pointer;
+}
+
+.calendar .days .day.clickable:hover
+{
+    z-index: 3;
+
+    border-color: #f36d40;
+    box-shadow: inset 0 0 0 2px #f36d40;
+}
+
+
+
 .grid_lines
 {
     position: absolute;
@@ -3623,4 +3846,123 @@ footer .creator a:hover
     width: 455px;
     max-width: 100%;
     margin: 0 auto;
+}
+
+
+
+#calendar_day_info_modal
+{
+    width: 910px;
+    padding: 30px 50px;
+}
+
+#calendar_day_info_modal .date
+{
+    color: #393939;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 34px;
+
+    margin-bottom: 25px;
+
+    text-transform: uppercase;
+}
+
+
+#calendar_day_info_modal .events > * + *
+{
+    margin-top: 30px;
+}
+
+#calendar_day_info_modal .event
+{
+    position: relative;
+
+    padding: 30px 329px 30px 38px;
+
+    border: 1px solid #e3e3e3;
+}
+
+#calendar_day_info_modal .event .name
+{
+    color: #393939;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+
+    text-transform: uppercase;
+}
+
+#calendar_day_info_modal .event .status
+{
+    color: rgba(57,57,57,.5);
+    font-size: 14px;
+    font-weight: 700;
+
+    position: relative;
+
+    margin-top: 15px;
+    padding-left: 17px;
+
+    text-transform: uppercase;
+}
+
+#calendar_day_info_modal .event .status:before
+{
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+
+    display: block;
+
+    width: 10px;
+    height: 10px;
+    margin: auto;
+
+    content: '';
+
+    border-radius: 50%;
+}
+
+#calendar_day_info_modal .event .status.green:before
+{
+    background: #58cc3d;
+}
+
+#calendar_day_info_modal .event .status.yellow:before
+{
+    background: #e7ca1f;
+}
+
+#calendar_day_info_modal .event .status.red:before
+{
+    background: #f34840;
+}
+
+#calendar_day_info_modal .event .btn
+{
+    color: #fff;
+    font-family: var(--font_family);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 45px;
+
+    position: absolute;
+    top: 0;
+    right: 41px;
+    bottom: 0;
+
+    width: 250px;
+    max-width: 100%;
+    height: 45px;
+    margin: auto;
+
+    cursor: pointer;
+    text-align: center;
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: 25px;
+    background: #f36d40;
 }
