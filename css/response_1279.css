@@ -90,6 +90,20 @@
     }
 
 
+    .text_block .gallery .flex
+    {
+        margin-bottom: -20px;
+        margin-left: -20px;
+    }
+
+    .text_block .gallery .flex > *
+    {
+        width: calc(33.333% - 20px);
+        margin-bottom: 20px;
+        margin-left: 20px;
+    }
+
+
 
     .form .captcha .field .exp
     {

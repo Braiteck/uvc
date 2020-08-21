@@ -61,6 +61,20 @@
     }
 
 
+    .text_block .gallery .flex
+    {
+        margin-bottom: -15px;
+        margin-left: -15px;
+    }
+
+    .text_block .gallery .flex > *
+    {
+        width: calc(50% - 15px);
+        margin-bottom: 15px;
+        margin-left: 15px;
+    }
+
+
 
     .form .input,
     .form textarea

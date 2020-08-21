@@ -79,6 +79,12 @@
     }
 
 
+    .text_block .gallery .flex > *
+    {
+        width: calc(50% - 20px);
+    }
+
+
 
     .content_flex .content > * + *
     {
