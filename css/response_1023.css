@@ -52,6 +52,11 @@
         line-height: 50px;
     }
 
+    .page_head .calendar_period
+    {
+        bottom: 0;
+    }
+
 
 
     .content_flex .content
@@ -585,40 +590,64 @@
 
 
 
-    .calendar .filter
+    .calendar .head .text_block
     {
-        margin-bottom: 25px;
-        padding: 20px;
+        width: calc(60% - 30px);
+        margin-right: auto;
     }
 
-    .calendar .filter .form .room
+
+    .calendar .days
     {
-        width: calc(50% - 15px);
+        --calendar_days_in_line: 3;
     }
-
-    .calendar .filter .form .date
-    {
-        width: calc(50% - 15px);
-    }
-
-    .calendar .filter .form .submit
-    {
-        width: calc(50% - 15px);
-        margin-top: 15px;
-        margin-left: auto;
-    }
-
-    .calendar .filter .form .submit_btn
-    {
-        font-size: 16px;
-
-        padding: 0 20px;
-    }
-
 
     .calendar .days > *
     {
         width: calc(33.333% + 1px);
+    }
+
+
+    .calendar_buy .event
+    {
+        padding: 20px;
+    }
+
+    .calendar_buy .event .title,
+    .calendar_buy .event .price
+    {
+        font-size: 22px;
+    }
+
+    .calendar_buy .event .count
+    {
+        font-size: 12px;
+    }
+
+    .calendar_buy .event .add > * + *
+    {
+        margin-left: 15px;
+    }
+
+    .calendar_buy .event .add .label
+    {
+        font-size: 12px;
+
+        margin-right: 15px;
+    }
+
+    .calendar_buy .event .add .add_btn
+    {
+        font-size: 16px;
+
+        padding: 0 25px;
+    }
+
+
+    .calendar_buy .text_block
+    {
+        margin-top: 20px;
+        padding: 0;
     }
 
 
@@ -673,42 +702,13 @@
     /*-----------
         PopUp
     -----------*/
-    #calendar_day_info_modal .date
+    #calendar_order_modal
     {
-        font-size: 28px;
-        line-height: 32px;
-
-        margin-bottom: 20px;
+        padding: 35px;
     }
 
-
-    #calendar_day_info_modal .events > * + *
-    {
-        margin-top: 20px;
-    }
-
-    #calendar_day_info_modal .event
-    {
-        padding: 20px 250px 20px 20px;
-    }
-
-    #calendar_day_info_modal .event .name
-    {
-        font-size: 19px;
-        line-height: 21px;
-    }
-
-    #calendar_day_info_modal .event .status
-    {
-        margin-top: 12px;
-    }
-
-    #calendar_day_info_modal .event .btn
+    #calendar_order_modal .order_info .name
     {
         font-size: 16px;
-
-        right: 20px;
-
-        width: 210px;
     }
 }

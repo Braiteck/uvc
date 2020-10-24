@@ -36,6 +36,15 @@
     }
 
 
+    .page_head .calendar_period
+    {
+        position: relative;
+        right: 0;
+
+        width: 100%;
+    }
+
+
 
     .text_block h2
     {
@@ -576,23 +585,29 @@
 
 
 
-    .calendar .filter .form .line
-    {
-        margin-bottom: 15px;
-    }
-
-    .calendar .filter .form .room,
-    .calendar .filter .form .date,
-    .calendar .filter .form .submit
+    .calendar .head .text_block
     {
         width: 100%;
     }
 
-    .calendar .filter .form .submit
+
+    .calendar .head .tickets_price
     {
-        margin-top: 0;
+        width: 100%;
+        margin-top: 25px;
+        padding: 20px;
     }
 
+    .calendar .head .tickets_price .title
+    {
+        font-size: 16px;
+    }
+
+
+    .calendar .days
+    {
+        --calendar_days_in_line: 2;
+    }
 
     .calendar .days > *
     {
@@ -606,9 +621,92 @@
         padding: 14px 19px 56px;
     }
 
-    .calendar .days .day .status
+    .calendar .days .day .events
     {
+        font-size: 11px;
+
         left: 19px;
+    }
+
+
+
+    .calendar_buy .event .title
+    {
+        width: 100%;
+    }
+
+    .calendar_buy .event .title,
+    .calendar_buy .event .price
+    {
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .calendar_buy .event .count
+    {
+        margin-top: 0;
+        margin-left: 0;
+    }
+
+
+    .calendar_buy .event .add > * + *
+    {
+        margin-left: 0;
+    }
+
+    .calendar_buy .event .add label ~ label
+    {
+        margin-left: 30px;
+    }
+
+    .calendar_buy .event .add .type
+    {
+        height: 56px;
+        margin-bottom: 0;
+    }
+
+    .calendar_buy .event .add .time,
+    .calendar_buy .event .add .amount
+    {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+    .calendar_buy .event .add .time .label,
+    .calendar_buy .event .add .amount .label
+    {
+        width: 90px;
+    }
+
+    .calendar_buy .event .add .add_btn
+    {
+        width: 100%;
+        margin-top: 15px;
+    }
+
+
+
+    .your_order_fixed .cont > * + *
+    {
+        margin-left: 20px;
+    }
+
+    .your_order_fixed .cart .title
+    {
+        font-size: 16px;
+    }
+
+    .your_order_fixed .cart .amount,
+    .your_order_fixed .cart .price
+    {
+        font-size: 13px;
+    }
+
+    .your_order_fixed .order_btn
+    {
+        font-size: 16px;
+
+        padding: 0 25px;
     }
 
 
@@ -716,35 +814,52 @@
 
 
 
-    #calendar_day_info_modal
+    #calendar_order_modal
     {
         padding: 40px;
     }
 
-    #calendar_day_info_modal .date
-    {
-        font-size: 26px;
-        line-height: 30px;
-    }
-
-
-    #calendar_day_info_modal .event
-    {
-        padding: 20px;
-    }
-
-    #calendar_day_info_modal .event .name
-    {
-        font-size: 18px;
-        line-height: 23px;
-    }
-
-    #calendar_day_info_modal .event .btn
+    #calendar_order_modal .order_info .event
     {
         position: relative;
+
+        flex-wrap: wrap;
+    }
+
+    #calendar_order_modal .order_info .event .info + .sep,
+    #calendar_order_modal .order_info .price.total + .sep
+    {
+        display: none;
+    }
+
+    #calendar_order_modal .order_info .event .sep
+    {
+        margin-top: 15px;
+        margin-left: -1px;
+    }
+
+    #calendar_order_modal .order_info .price,
+    #calendar_order_modal .order_info .amount,
+    #calendar_order_modal .order_info .price.total
+    {
+        width: 33.333%;
+        min-width: 0;
+        margin-top: 15px;
+    }
+
+    #calendar_order_modal .order_info .delete
+    {
+        position: absolute;
+        top: 0;
         right: 0;
 
-        width: 250px;
-        margin: 15px 0 0;
+        width: auto;
+        min-width: 0;
+    }
+
+    #calendar_order_modal .order_info .delete button
+    {
+        width: 44px;
+        height: 44px;
     }
 }

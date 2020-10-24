@@ -235,8 +235,16 @@ body.lock
 
 .page_head
 {
+    position: relative;
+    z-index: 98;
+
     margin-bottom: 50px;
     padding-top: 20px;
+}
+
+.page_head .cont
+{
+    position: relative;
 }
 
 .page_head .cont > * + *
@@ -295,6 +303,113 @@ body.lock
     line-height: 57px;
 
     text-transform: uppercase;
+}
+
+
+
+.page_head .calendar_period
+{
+    position: absolute;
+    z-index: 9;
+    right: 20px;
+    bottom: 6px;
+
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    --form_border_color: #ccdeec;
+    --form_bg_color: #fff;
+}
+
+.page_head .calendar_period > * + *
+{
+    margin-left: 14px;
+}
+
+.page_head .calendar_period .nice-select
+{
+    min-width: 213px;
+}
+
+.page_head .calendar_period .nice-select .current
+{
+    line-height: 44px;
+
+    height: 46px;
+    padding-right: 50px;
+    padding-left: 20px;
+
+    border-width: 2px;
+}
+
+.page_head .calendar_period .nice-select .current:after
+{
+    width: 12px;
+    height: 12px;
+
+    border-width: 2px;
+    border-color: #3b3b3b;
+}
+
+.page_head .calendar_period .nice-select .list
+{
+    border-width: 2px;
+}
+
+.page_head .calendar_period .nice-select .list .list_item
+{
+    line-height: 44px;
+
+    padding: 0 20px;
+}
+
+.page_head .calendar_period .prev,
+.page_head .calendar_period .next
+{
+    position: relative;
+
+    display: block;
+
+    width: 46px;
+    height: 46px;
+
+    cursor: pointer;
+    transition: .2s linear;
+
+    border: 2px solid #ccdeec;
+    border-radius: 50%;
+}
+
+.page_head .calendar_period .prev:after,
+.page_head .calendar_period .next:after
+{
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 6px;
+
+    display: block;
+
+    width: 12px;
+    height: 12px;
+    margin: auto;
+
+    content: '';
+    transform: rotate(-45deg);
+
+    border-top: 2px solid #3b3b3b;
+    border-left: 2px solid #3b3b3b;
+}
+
+.page_head .calendar_period .next:after
+{
+    left: -6px;
+
+    transform: rotate(-225deg);
 }
 
 
@@ -3463,74 +3578,92 @@ aside .links a.active
 
 
 
-.calendar .filter
-{
-    margin-bottom: 40px;
-    padding: 25px 38px;
-
-    background: #edf4fb;
-}
-
-.calendar .filter .form
+.calendar .head
 {
     display: flex;
 
     justify-content: space-between;
+    align-items: flex-start;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+
+
+.calendar .head .text_block
+{
+    width: calc(60% - 50px);
+    margin-right: auto;
+}
+
+
+.calendar .head .tickets_price
+{
+    width: 40%;
+    padding: 23px;
+
+    background: #edf4fb;
+}
+
+.calendar .head .tickets_price .title
+{
+    color: #393939;
+    font-size: 18px;
+    font-weight: 700;
+
+    margin-bottom: 20px;
+
+    text-transform: uppercase;
+}
+
+.calendar .head .ticket
+{
+    display: flex;
+
+    margin-bottom: -8px;
+    margin-left: -20px;
+
+    justify-content: flex-start;
     align-items: center;
     align-content: center;
     flex-wrap: wrap;
 }
 
-.calendar .filter .form .line
+.calendar .head .ticket + .ticket
 {
-    display: flex;
-
-    margin-bottom: 0;
-
-    justify-content: flex-start;
-    align-items: center;
-    align-content: center;
-    flex-wrap: nowrap;
+    margin-top: 20px;
 }
 
-.calendar .filter .form .label
+.calendar .head .ticket > *
 {
-    font-size: 16px;
+    width: calc(50% - 20px);
+    margin-bottom: 8px;
+    margin-left: 20px;
+}
+
+.calendar .head .ticket .name
+{
+    color: #005ca1;
+    font-size: 14px;
     font-weight: 700;
 
-    padding-right: 20px;
+    width: calc(100% - 20px);
 
     text-transform: uppercase;
 }
 
-.calendar .filter .form .field
+.calendar .head .ticket .name span
 {
-    width: 100%;
+    color: #979797;
+    font-size: 12px;
 }
 
-.calendar .filter .form .room
+.calendar .head .ticket .price
 {
-    width: calc(53% - 40px);
-}
-
-.calendar .filter .form .date
-{
-    width: calc(29% - 40px);
-}
-
-.calendar .filter .form .submit
-{
-    width: 18%;
-    padding: 0;
-}
-
-.calendar .filter .form .submit_btn
-{
+    color: #393939;
+    font-size: 12px;
     font-weight: 700;
-    line-height: 45px;
 
-    height: 45px;
-    padding-top: 1px;
+    text-transform: uppercase;
 }
 
 
@@ -3546,6 +3679,7 @@ aside .links a.active
     align-items: stretch;
     align-content: stretch;
     flex-wrap: wrap;
+    --calendar_days_in_line: 5;
 }
 
 .calendar .days > *
@@ -3554,6 +3688,12 @@ aside .links a.active
     min-height: 170px;
     margin-bottom: -1px;
     margin-left: -1px;
+}
+
+.calendar .days > *.calendar_buy
+{
+    width: calc(100% + 1px);
+    min-height: 0;
 }
 
 
@@ -3596,10 +3736,41 @@ aside .links a.active
 
     padding: 19px 24px 56px;
 
+    cursor: pointer;
     transition: .2s linear;
 
     border: 1px solid #e3e3e3;
 }
+
+.calendar .days .day.no_place
+{
+    cursor: default;
+}
+
+.calendar .days .day:after
+{
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+    left: 0;
+
+    display: block;
+
+    width: 16px;
+    height: 16px;
+    margin: auto;
+
+    content: '';
+    transition: opacity .2s linear;
+    transform: rotate(-45deg);
+    pointer-events: none;
+
+    opacity: 0;
+    border-bottom: 3px solid #f36d40;
+    border-left: 3px solid #f36d40;
+    background: #fff;
+}
+
 
 .calendar .days .day .date
 {
@@ -3610,34 +3781,37 @@ aside .links a.active
     text-transform: uppercase;
 }
 
-.calendar .days .day .event
-{
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 20px;
 
-    margin-top: 5px;
-}
-
-.calendar .days .day .status
+.calendar .days .day .events
 {
     color: rgba(57,57,57,.5);
-    font-size: 14px;
+    font-size: 12px;
     font-weight: 700;
 
     position: absolute;
     bottom: 19px;
     left: 24px;
+}
+
+.calendar .days .day .events > * + *
+{
+    margin-top: 8px;
+}
+
+
+.calendar .days .day .event
+{
+    position: relative;
 
     padding-left: 17px;
 
     text-transform: uppercase;
 }
 
-.calendar .days .day .status:before
+.calendar .days .day .event:before
 {
     position: absolute;
-    top: 0;
+    top: -1px;
     bottom: 0;
     left: 0;
 
@@ -3652,33 +3826,563 @@ aside .links a.active
     border-radius: 50%;
 }
 
-.calendar .days .day .status.green:before
+.calendar .days .day .event.green:before
 {
     background: #58cc3d;
 }
 
-.calendar .days .day .status.yellow:before
+.calendar .days .day .event.red
 {
-    background: #e7ca1f;
+    color: rgba(57,57,57,.2);
 }
 
-.calendar .days .day .status.red:before
+.calendar .days .day .event.red:before
 {
     background: #f34840;
 }
 
 
-.calendar .days .day.clickable
+.calendar .days .day .no_place_info
 {
-    cursor: pointer;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 24px;
+
+    position: absolute;
+    z-index: 9;
+    top: 0;
+    bottom: 0;
+    left: -20px;
+
+    display: flex;
+    visibility: hidden;
+
+    width: calc(100% + 40px);
+    height: 50px;
+    margin: auto;
+
+    transition: .2s linear;
+    text-align: center;
+    text-transform: uppercase;
+    pointer-events: none;
+
+    opacity: 0;
+    background: #fff;
+    box-shadow: 0 0 8px rgba(0,0,0,.3);
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
 }
 
-.calendar .days .day.clickable:hover
+
+.calendar .days .day.no_place:hover .no_place_info
+{
+    visibility: visible;
+
+    pointer-events: auto;
+
+    opacity: 1;
+}
+
+
+.calendar .days .day:not(.no_place):hover,
+.calendar .days .day.open
 {
     z-index: 3;
 
     border-color: #f36d40;
     box-shadow: inset 0 0 0 2px #f36d40;
+}
+
+.calendar .days .day.open
+{
+    z-index: 5;
+}
+
+.calendar .days .day.open:after
+{
+    opacity: 1;
+}
+
+
+
+.your_order_fixed
+{
+    position: relative;
+    z-index: 99;
+    bottom: 0;
+    left: 0;
+
+    width: 100%;
+    padding: 17px 0;
+
+    background: #fff;
+    box-shadow: 0 -1px 20px 0 rgba(0, 0, 0, .2);
+}
+
+.your_order_fixed .cont
+{
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.your_order_fixed .cont > * + *
+{
+    margin-left: 33px;
+}
+
+.your_order_fixed .cart .title
+{
+    color: #393939;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+
+    text-transform: uppercase;
+}
+
+.your_order_fixed .cart .amount,
+.your_order_fixed .cart .price
+{
+    color: #005ca1;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 23px;
+
+    display: inline-block;
+
+    vertical-align: top;
+    text-transform: uppercase;
+}
+
+.your_order_fixed .cart .price
+{
+    margin-left: 10px;
+}
+
+.your_order_fixed .order_btn
+{
+    color: #fff;
+    font-family: var(--font_family);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 47px;
+
+    display: inline-block;
+
+    max-width: 100%;
+    height: 46px;
+    padding: 0 31px;
+
+    cursor: pointer;
+    vertical-align: top;
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: 23px;
+    background: #f36d40;
+}
+
+
+
+.calendar_buy
+{
+    display: none;
+
+    padding: 40px;
+
+    background: #edf4fb;
+}
+
+
+.calendar_buy .event
+{
+    display: flex;
+
+    padding: 25px 30px;
+
+    background: #fff;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+    --form_border_color: #005ca1;
+    --form_bg_color: #fff;
+}
+
+.calendar_buy .event + .event
+{
+    margin-top: 10px;
+}
+
+.calendar_buy .event .title
+{
+    color: #393939;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30px;
+
+    text-transform: uppercase;
+}
+
+.calendar_buy .event .count
+{
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+
+    margin-top: 6px;
+    margin-left: 10px;
+
+    text-transform: uppercase;
+
+    opacity: .5;
+}
+
+.calendar_buy .event .price
+{
+    color: #393939;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 30px;
+
+    margin-left: auto;
+
+    text-transform: uppercase;
+}
+
+.calendar_buy .event .add
+{
+    display: flex;
+
+    width: 100%;
+    margin-top: 25px;
+
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+.calendar_buy .event .add > * + *
+{
+    margin-left: 30px;
+}
+
+
+.calendar_buy .event .add .label
+{
+    color: #000;
+    font-size: 14px;
+    font-weight: 700;
+
+    margin-right: 20px;
+
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+
+.calendar_buy .event .add .nice-select
+{
+    min-width: 180px;
+}
+
+.calendar_buy .event .add .nice-select .current
+{
+    line-height: 44px;
+
+    height: 46px;
+    padding-right: 50px;
+    padding-left: 20px;
+
+    border-width: 2px;
+}
+
+.calendar_buy .event .add .nice-select .current:after
+{
+    width: 12px;
+    height: 12px;
+
+    border-width: 2px;
+    border-color: #3b3b3b;
+}
+
+.calendar_buy .event .add .nice-select .list
+{
+    border-width: 2px;
+}
+
+.calendar_buy .event .add .nice-select .list .list_item
+{
+    line-height: 44px;
+
+    padding: 0 20px;
+}
+
+
+.calendar_buy .event .add .input
+{
+    border-width: 2px;
+}
+
+.calendar_buy .event .add .input.error
+{
+    border-color: #c3172b;
+}
+
+.calendar_buy .event .add .amount .input
+{
+    font-size: 16px;
+    font-weight: 700;
+
+    width: 94px;
+    height: 46px;
+    padding: 0 15px;
+
+    text-align: center;
+}
+
+
+.calendar_buy .event .add .maximum_error_text
+{
+    color: #c3172b;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 18px;
+
+    position: absolute;
+    right: 0;
+    bottom: 54px;
+    left: 0;
+
+    display: none;
+
+    margin: auto;
+    padding: 0 5px;
+
+    white-space: nowrap;
+    text-transform: uppercase;
+
+    background: #edf4fb;
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, .35);
+}
+
+.calendar_buy .event .add .maximum_error_text:after
+{
+    position: absolute;
+    top: 100%;
+    right: 0;
+    left: 0;
+
+    display: block;
+
+    width: 6px;
+    height: 6px;
+    margin: auto;
+
+    content: '';
+
+    border-top: 6px solid #edf4fb;
+    border-right: 3px solid transparent;
+    border-left: 3px solid transparent;
+}
+
+
+.calendar_buy .event .add .time,
+.calendar_buy .event .add .amount
+{
+    display: flex;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
+}
+
+.calendar_buy .event .add .amount
+{
+    position: relative;
+    z-index: 3;
+}
+
+
+.calendar_buy .event .add .type
+{
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+
+    width: 100%;
+    height: 46px;
+
+    background: #fff7dc;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.calendar_buy .event .add .type:before,
+.calendar_buy .event .add .type:after
+{
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: -55px;
+
+    display: block;
+
+    width: 100px;
+    height: 100%;
+
+    content: '';
+
+    background: #fff7dc;
+}
+
+.calendar_buy .event .add .type:after
+{
+    right: -55px;
+    left: auto;
+}
+
+.calendar_buy .event .add input[type=radio]
+{
+    display: none;
+}
+
+.calendar_buy .event .add label
+{
+    color: #000;
+    font-weight: 700;
+
+    position: relative;
+
+    display: block;
+
+    min-height: 22px;
+    padding-left: 30px;
+
+    cursor: pointer;
+    text-transform: uppercase;
+}
+
+.calendar_buy .event .add label ~ label
+{
+    margin-left: 50px;
+}
+
+.calendar_buy .event .add label .name
+{
+    font-size: 14px;
+}
+
+.calendar_buy .event .add label .available
+{
+    font-size: 11px;
+
+    opacity: .4;
+}
+
+.calendar_buy .event .add label:before
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 22px;
+    height: 22px;
+
+    content: '';
+    transition: .2s linear;
+
+    border: 2px solid var(--form_border_color);
+    border-radius: 50%;
+    background: #fff;
+}
+
+.calendar_buy .event .add label:after
+{
+    position: absolute;
+    top: 6px;
+    left: 6px;
+
+    display: block;
+
+    width: 10px;
+    height: 10px;
+
+    content: '';
+    transition: opacity .2s linear;
+
+    opacity: 0;
+    border-radius: 50%;
+    background: #fff;
+}
+
+.calendar_buy .event .add input[type=radio]:checked + label:before
+{
+    background: var(--form_border_color);
+}
+
+.calendar_buy .event .add input[type=radio]:checked + label:after
+{
+    opacity: 1;
+}
+
+
+.calendar_buy .event .add .add_btn
+{
+    color: #fff;
+    font-family: var(--font_family);
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 46px;
+
+    position: relative;
+    z-index: 3;
+
+    display: inline-block;
+
+    max-width: 100%;
+    height: 46px;
+    padding: 0 31px;
+
+    cursor: pointer;
+    vertical-align: top;
+    text-transform: uppercase;
+
+    border: none;
+    border-radius: 23px;
+    background: #f36d40;
+}
+
+
+.calendar_buy .text_block
+{
+    color: #000;
+    font-size: 10px;
+    font-weight: 700;
+    line-height: 16px;
+
+    margin-top: 30px;
+    padding: 0 30px;
+
+    text-transform: uppercase;
+
+    opacity: .4;
 }
 
 
@@ -3939,119 +4643,231 @@ footer .creator a:hover
 
 
 
-#calendar_day_info_modal
+#calendar_order_modal
 {
-    width: 910px;
-    padding: 30px 50px;
+    width: 780px;
+    padding: 40px 45px;
+
+    background: #fff;
 }
 
-#calendar_day_info_modal .date
+#calendar_order_modal .modal_title
 {
-    color: #393939;
-    font-size: 30px;
-    font-weight: 700;
-    line-height: 34px;
+    text-align: left;
+}
 
-    margin-bottom: 25px;
+#calendar_order_modal .form
+{
+    width: 100%;
+
+    --form_border_color: #005ca1;
+}
+
+#calendar_order_modal .form .columns
+{
+    --form_columns_offset: 40px;
+}
+
+#calendar_order_modal .form .line
+{
+    margin-bottom: 30px;
+}
+
+#calendar_order_modal .form .label
+{
+    color: #000;
+    font-weight: 700;
+
+    margin-bottom: 12px;
 
     text-transform: uppercase;
 }
 
-
-#calendar_day_info_modal .events > * + *
+#calendar_order_modal .form .input
 {
-    margin-top: 30px;
+    border-width: 2px;
 }
 
-#calendar_day_info_modal .event
+#calendar_order_modal .form .submit
 {
-    position: relative;
+    padding: 0;
 
-    padding: 30px 329px 30px 38px;
+    justify-content: flex-end;
+}
+
+#calendar_order_modal .form .submit_btn
+{
+    line-height: 46px;
+
+    width: auto;
+    height: 45px;
+    padding: 0 40px;
+}
+
+
+#calendar_order_modal .order_info .event
+{
+    display: flex;
+
+    padding: 18px 0;
 
     border: 1px solid #e3e3e3;
+
+    justify-content: flex-start;
+    align-items: center;
+    align-content: center;
+    flex-wrap: nowrap;
 }
 
-#calendar_day_info_modal .event .name
+#calendar_order_modal .order_info .event + .event
+{
+    margin-top: -1px;
+}
+
+
+#calendar_order_modal .order_info .info
 {
     color: #393939;
-    font-size: 22px;
+    font-size: 11px;
     font-weight: 700;
-    line-height: 24px;
+
+    width: 100%;
+    padding: 0 20px;
 
     text-transform: uppercase;
 }
 
-#calendar_day_info_modal .event .status
+#calendar_order_modal .order_info .info > * + *
 {
-    color: rgba(57,57,57,.5);
+    margin-top: 3px;
+}
+
+#calendar_order_modal .order_info .name
+{
+    color: #005ca1;
+    font-size: 18px;
+}
+
+
+#calendar_order_modal .order_info .sep
+{
+    width: 1px;
+    height: 50px;
+
+    background: #e5e5e5;
+}
+
+
+#calendar_order_modal .order_info .title
+{
+    color: #c6bcbc;
+    font-size: 11px;
+    font-weight: 700;
+
+    margin-bottom: 5px;
+
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+
+#calendar_order_modal .order_info .price
+{
+    width: 103px;
+    min-width: 103px;
+    padding: 0 20px;
+}
+
+#calendar_order_modal .order_info .price.total
+{
+    width: 128px;
+    min-width: 128px;
+}
+
+#calendar_order_modal .order_info .price .val
+{
+    color: #393939;
+    font-size: 18px;
+    font-weight: 700;
+
+    text-align: center;
+    white-space: nowrap;
+    text-transform: uppercase;
+}
+
+
+#calendar_order_modal .order_info .amount
+{
+    width: 95px;
+    min-width: 95px;
+    padding: 0 20px;
+}
+
+#calendar_order_modal .order_info .amount .input
+{
     font-size: 14px;
     font-weight: 700;
 
-    position: relative;
+    width: 54px;
+    height: 28px;
+    margin: 0 auto;
+    padding: 0 10px;
 
-    margin-top: 15px;
-    padding-left: 17px;
-
-    text-transform: uppercase;
+    text-align: center;
 }
 
-#calendar_day_info_modal .event .status:before
+
+#calendar_order_modal .order_info .delete
+{
+    width: 44px;
+    min-width: 44px;
+}
+
+#calendar_order_modal .order_info .delete button
+{
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: 50px;
+
+    cursor: pointer;
+
+    border: none;
+    background: none;
+}
+
+#calendar_order_modal .order_info .delete button:before,
+#calendar_order_modal .order_info .delete button:after
 {
     position: absolute;
     top: 0;
+    right: 0;
     bottom: 0;
     left: 0;
 
     display: block;
 
-    width: 10px;
-    height: 10px;
+    width: 50%;
+    height: 2px;
     margin: auto;
 
     content: '';
+    transition: background .2s linear;
+    transform: rotate(45deg);
 
-    border-radius: 50%;
+    background: #d7d7d7;
 }
 
-#calendar_day_info_modal .event .status.green:before
+#calendar_order_modal .order_info .delete button:after
 {
-    background: #58cc3d;
+    transform: rotate(-45deg);
 }
 
-#calendar_day_info_modal .event .status.yellow:before
+#calendar_order_modal .order_info .delete button:hover:before,
+#calendar_order_modal .order_info .delete button:hover:after
 {
-    background: #e7ca1f;
-}
-
-#calendar_day_info_modal .event .status.red:before
-{
-    background: #f34840;
-}
-
-#calendar_day_info_modal .event .btn
-{
-    color: #fff;
-    font-family: var(--font_family);
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 45px;
-
-    position: absolute;
-    top: 0;
-    right: 41px;
-    bottom: 0;
-
-    width: 250px;
-    max-width: 100%;
-    height: 45px;
-    margin: auto;
-
-    cursor: pointer;
-    text-align: center;
-    text-transform: uppercase;
-
-    border: none;
-    border-radius: 25px;
-    background: #f36d40;
+    background: #393939;
 }

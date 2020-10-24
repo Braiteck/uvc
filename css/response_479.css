@@ -31,6 +31,18 @@
 
 
 
+    .page_head .calendar_period
+    {
+        padding-top: 10px;
+    }
+
+    .page_head .calendar_period .nice-select
+    {
+        min-width: 200px;
+    }
+
+
+
     .text_block h2
     {
         font-size: 22px;
@@ -389,11 +401,14 @@
 
 
 
-    .calendar .filter .form .label
+    .calendar .days
     {
-        font-size: 14px;
+        --calendar_days_in_line: 1;
+    }
 
-        padding-right: 15px;
+    .calendar .days > *
+    {
+        width: calc(100% + 1px);
     }
 
 
@@ -410,11 +425,110 @@
         line-height: 22px;
     }
 
-    .calendar .days .day .status
+    .calendar .days .day .events
     {
-        font-size: 10px;
+        font-size: 12px;
 
         left: 15px;
+    }
+
+
+
+    .calendar_buy .event .title
+    {
+        margin-bottom: 10px;
+    }
+
+    .calendar_buy .event .title,
+    .calendar_buy .event .price
+    {
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+
+    .calendar_buy .event .add .label
+    {
+        font-size: 11px;
+
+        width: 83px;
+        margin-right: 12px;
+    }
+
+    .calendar_buy .event .add label ~ label
+    {
+        margin-left: 20px;
+    }
+
+    .calendar_buy .event .add label .name
+    {
+        font-size: 12px;
+    }
+
+    .calendar_buy .event .add label .available
+    {
+        font-size: 10px;
+    }
+
+    .calendar_buy .event .add .nice-select
+    {
+        min-width: 162px;
+    }
+
+    .calendar_buy .event .add .nice-select .current
+    {
+        padding-right: 45px;
+        padding-left: 15px;
+    }
+
+
+    .calendar_buy .event .add .type
+    {
+        width: calc(100% + 40px);
+        margin-right: -20px;
+        margin-left: -20px;
+        padding: 10px 20px;
+    }
+
+
+
+    .your_order_fixed .cont > * + *
+    {
+        margin-left: auto;
+    }
+
+    .your_order_fixed .cart .title
+    {
+        font-size: 15px;
+    }
+
+    .your_order_fixed .cart .amount,
+    .your_order_fixed .cart .price
+    {
+        font-size: 13px;
+        line-height: 19px;
+
+        display: block;
+    }
+
+    .your_order_fixed .cart .price
+    {
+        margin-left: 0;
+    }
+
+    .your_order_fixed .order_btn
+    {
+        font-size: 14px;
+        line-height: 40px;
+
+        height: 40px;
+        padding: 0 20px;
+    }
+
+
+    .your_order_fixed.scrollfix-bottom
+    {
+        padding: 10px 0;
     }
 
 
@@ -476,21 +590,39 @@
 
 
 
-    #calendar_day_info_modal
+    #calendar_order_modal
     {
         padding: 30px;
     }
 
-    #calendar_day_info_modal .date
+    #calendar_order_modal .order_info .name
     {
-        font-size: 22px;
-        line-height: 26px;
+        font-size: 15px;
+    }
+
+    #calendar_order_modal .order_info .amount + .sep
+    {
+        display: none;
+    }
+
+    #calendar_order_modal .order_info .price,
+    #calendar_order_modal .order_info .amount,
+    #calendar_order_modal .order_info .price.total
+    {
+        width: 50%;
+    }
+
+    #calendar_order_modal .order_info .delete button
+    {
+        width: 38px;
+        height: 38px;
     }
 
 
-    #calendar_day_info_modal .event .name
+    #calendar_order_modal .form .submit_btn
     {
-        font-size: 17px;
-        line-height: 23px;
+        font-size: 16px;
+
+        width: 100%;
     }
 }

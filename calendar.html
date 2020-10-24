@@ -164,6 +164,19 @@
 
 						<h1 class="page_title">Календарь</h1>
 
+						<form action="" class="calendar_period form">
+							<a href="/" class="prev"></a>
+
+							<select name="">
+								<option value="1">Июнь 2020</option>
+								<option value="2">Июль 2020</option>
+								<option value="3">Август 2020</option>
+								<option value="4">Сентябрь 2020</option>
+							</select>
+
+							<a href="/" class="next"></a>
+						</form>
+
 					</div>
 				</section>
 
@@ -171,38 +184,30 @@
 				<section class="calendar block">
 					<div class="cont">
 
-						<div class="filter">
-							<form action="" class="form">
-								<div class="line room">
-									<div class="label">Помещение</div>
+						<div class="head block">
+							<div class="text_block">
+								<p class="big">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
 
-									<div class="field">
-										<select name="">
-											<option value="0" selected>Все</option>
-											<option value="1">Вариант 1</option>
-											<option value="2">Вариант 2</option>
-											<option value="3">Вариант 3</option>
-										</select>
-									</div>
+								<p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.</p>
+							</div>
+
+							<div class="tickets_price">
+								<div class="title">Стоимость билетов</div>
+
+								<div class="ticket">
+									<div class="name">Полный</div>
+
+									<div class="price">Экспериментариум — 100 ₽</div>
+									<div class="price">Экспозиция — 200 ₽ </div>
 								</div>
 
-								<div class="line date">
-									<div class="label">месяц</div>
+								<div class="ticket">
+									<div class="name">льготный <span>(Дети от 5 до 18 лет; студенты; пенсионеры)</span></div>
 
-									<div class="field">
-										<select name="">
-											<option value="1" selected>Июнь 2020</option>
-											<option value="2">Июль 2020</option>
-											<option value="3">Август 2020</option>
-											<option value="4">Сентябрь 2020</option>
-										</select>
-									</div>
+									<div class="price">Экспериментариум — 80 ₽</div>
+									<div class="price">Экспозиция — 120 ₽ </div>
 								</div>
-
-								<div class="submit">
-									<button type="submit" class="submit_btn">Применить</button>
-								</div>
-							</form>
+							</div>
 						</div>
 
 
@@ -215,152 +220,288 @@
 							<div class="day">
 								<div class="date">1 июня</div>
 
-								<div class="status green">Свободно</div>
+								<div class="events">
+									<div class="event green">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
 							</div>
 
 							<div class="day">
 								<div class="date">2 июня</div>
 
-								<div class="event">Экскурсия для учащихся школ г. Тамбов</div>
-
-								<div class="status red">зарезервировано</div>
+								<div class="events">
+									<div class="event green">Экспериментариум (14)</div>
+									<div class="event red">Экспозиция (45)</div>
+								</div>
 							</div>
 
-							<div class="day clickable modal_link" data-content="#calendar_day_info_modal">
+							<div class="day">
 								<div class="date">3 июня</div>
 
-								<div class="status yellow">Выберите зал</div>
+								<div class="events">
+									<div class="event green">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
 							</div>
 
 							<div class="day">
 								<div class="date">4 июня</div>
 
-								<div class="status green">Свободно</div>
+								<div class="events">
+									<div class="event green">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
 							</div>
 
 							<div class="day">
 								<div class="date">5 июня</div>
 
-								<div class="status green">Свободно</div>
+								<div class="events">
+									<div class="event red">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
 							</div>
 
-							<div class="day">
+							<div class="day no_place">
 								<div class="date">6 июня</div>
 
-								<div class="event">Экскурсия для учащихся школ г. Тамбов</div>
+								<div class="events">
+									<div class="event red">Экспериментариум (14)</div>
+									<div class="event red">Экспозиция (45)</div>
+								</div>
 
-								<div class="status red">зарезервировано</div>
+								<div class="no_place_info">Мест нет</div>
 							</div>
 
-							<div class="day clickable modal_link" data-content="#calendar_day_info_modal">
+							<div class="day no_place">
 								<div class="date">7 июня</div>
 
-								<div class="status yellow">Выберите зал</div>
+								<div class="events">
+									<div class="event red">Экспериментариум (14)</div>
+									<div class="event red">Экспозиция (45)</div>
+								</div>
+
+								<div class="no_place_info">Мест нет</div>
 							</div>
 
 							<div class="day">
 								<div class="date">8 июня</div>
 
-								<div class="status green">Свободно</div>
+								<div class="events">
+									<div class="event green">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
 							</div>
 
 							<div class="day">
 								<div class="date">9 июня</div>
 
-								<div class="status green">Свободно</div>
+								<div class="events">
+									<div class="event red">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
 							</div>
 
 							<div class="day">
 								<div class="date">10 июня</div>
 
-								<div class="status green">Свободно</div>
+								<div class="events">
+									<div class="event green">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
 							</div>
 
-							<div class="day clickable modal_link" data-content="#calendar_day_info_modal">
+							<div class="day">
 								<div class="date">11 июня</div>
 
-								<div class="status yellow">Выберите зал</div>
+								<div class="events">
+									<div class="event green">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
 							</div>
 
 							<div class="day">
 								<div class="date">12 июня</div>
 
-								<div class="status green">Свободно</div>
+								<div class="events">
+									<div class="event green">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
 							</div>
 
 							<div class="day">
 								<div class="date">13 июня</div>
 
-								<div class="status green">Свободно</div>
+								<div class="events">
+									<div class="event green">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
 							</div>
 
 							<div class="day">
 								<div class="date">14 июня</div>
 
-								<div class="status green">Свободно</div>
+								<div class="events">
+									<div class="event red">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
 							</div>
 
 							<div class="day">
 								<div class="date">15 июня</div>
 
-								<div class="status green">Свободно</div>
-							</div>
-
-							<div class="day clickable modal_link" data-content="#calendar_day_info_modal">
-								<div class="date">16 июня</div>
-
-								<div class="status yellow">Выберите зал</div>
+								<div class="events">
+									<div class="event red">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
 							</div>
 
 							<div class="day">
+								<div class="date">16 июня</div>
+
+								<div class="events">
+									<div class="event red">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
+							</div>
+
+							<div class="day no_place">
 								<div class="date">17 июня</div>
 
-								<div class="status green">Свободно</div>
+								<div class="events">
+									<div class="event red">Экспериментариум (14)</div>
+									<div class="event red">Экспозиция (45)</div>
+								</div>
+
+								<div class="no_place_info">Мест нет</div>
 							</div>
 
 							<div class="day">
 								<div class="date">18 июня</div>
 
-								<div class="status green">Свободно</div>
+								<div class="events">
+									<div class="event green">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
 							</div>
 
 							<div class="day">
 								<div class="date">19 июня</div>
 
-								<div class="status green">Свободно</div>
+								<div class="events">
+									<div class="event red">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
 							</div>
 
 							<div class="day">
 								<div class="date">20 июня</div>
 
-								<div class="status green">Свободно</div>
+								<div class="events">
+									<div class="event red">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
 							</div>
 
-							<div class="day clickable modal_link" data-content="#calendar_day_info_modal">
+							<div class="day">
 								<div class="date">21 июня</div>
 
-								<div class="status yellow">Выберите зал</div>
+								<div class="events">
+									<div class="event green">Экспериментариум (14)</div>
+									<div class="event red">Экспозиция (45)</div>
+								</div>
 							</div>
 
 							<div class="day">
 								<div class="date">22 июня</div>
 
-								<div class="status green">Свободно</div>
+								<div class="events">
+									<div class="event green">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
 							</div>
 
-							<div class="day">
+							<div class="day no_place">
 								<div class="date">23 июня</div>
 
-								<div class="status green">Свободно</div>
+								<div class="events">
+									<div class="event red">Экспериментариум (14)</div>
+									<div class="event red">Экспозиция (45)</div>
+								</div>
+
+								<div class="no_place_info">Мест нет</div>
 							</div>
 
 							<div class="day">
 								<div class="date">24 июня</div>
 
-								<div class="status green">Свободно</div>
+								<div class="events">
+									<div class="event red">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
+							</div>
+
+							<div class="day">
+								<div class="date">25 июня</div>
+
+								<div class="events">
+									<div class="event red">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
+							</div>
+
+							<div class="day">
+								<div class="date">26 июня</div>
+
+								<div class="events">
+									<div class="event red">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
+							</div>
+
+							<div class="day no_place">
+								<div class="date">27 июня</div>
+
+								<div class="events">
+									<div class="event red">Экспериментариум (14)</div>
+									<div class="event red">Экспозиция (45)</div>
+								</div>
+
+								<div class="no_place_info">Мест нет</div>
+							</div>
+
+							<div class="day">
+								<div class="date">28 июня</div>
+
+								<div class="events">
+									<div class="event green">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
+							</div>
+
+							<div class="day">
+								<div class="date">29 июня</div>
+
+								<div class="events">
+									<div class="event red">Экспериментариум (14)</div>
+									<div class="event green">Экспозиция (45)</div>
+								</div>
 							</div>
 						</div>
 
+					</div>
+				</section>
+
+
+				<section class="your_order_fixed">
+					<div class="cont">
+						<div class="cart">
+							<div class="title">Ваш заказ:</div>
+							<div class="amount">4 билета</div>
+							<div class="price">Сумма: 200 ₽</div>
+						</div>
+
+						<button class="order_btn modal_link" data-content="#calendar_order_modal">Оформить заказ</button>
 					</div>
 				</section>
 				<!-- End Основная часть -->
@@ -468,31 +609,113 @@
 		</section>
 
 
-		<section class="modal" id="calendar_day_info_modal">
-			<div class="date">7 июня 2020</div>
+		<section class="modal" id="calendar_order_modal">
+			<div class="modal_title">Оформить заказ</div>
 
-			<div class="events">
-				<div class="event">
-					<div class="name">Экскурсионная программа</div>
+			<div class="modal_data">
+				<form action="" class="form">
+					<div class="columns flex">
+						<div class="line">
+							<div class="label">Ваши фамилия и имя</div>
 
-					<div class="status green">Свободно</div>
+							<div class="field">
+								<input type="text" name="" value="" class="input" placeholder="Иван Иванов">
+							</div>
+						</div>
 
-					<div class="btn">Забронировать</div>
-				</div>
+						<div class="line">
+							<div class="label">Телефон</div>
 
-				<div class="event">
-					<div class="name">Лабаратория</div>
+							<div class="field">
+								<input type="tel" name="" value="" class="input" placeholder="+7">
+							</div>
+						</div>
+					</div>
 
-					<div class="status green">Свободно</div>
+					<div class="line">
+						<div class="label">ваш заказ</div>
 
-					<div class="btn">Забронировать</div>
-				</div>
+						<div class="field order_info">
+							<div class="event">
+								<div class="info">
+									<div class="date">11 октября 2020, 10:00 — 12:00</div>
+									<div class="name">Экспозиционный зал</div>
+									<div class="type">льготный Билет</div>
+								</div>
 
-				<div class="event">
-					<div class="name">Кинозал</div>
+								<div class="sep"></div>
 
-					<div class="status red">Свободно</div>
-				</div>
+								<div class="price">
+									<div class="title">Цена</div>
+									<div class="val">200 ₽</div>
+								</div>
+
+								<div class="sep"></div>
+
+								<div class="amount">
+									<div class="title">кол-во</div>
+									<div class="val">
+										<input type="text" name="" value="3" class="input">
+									</div>
+								</div>
+
+								<div class="sep"></div>
+
+								<div class="price total">
+									<div class="title">Стоимость</div>
+									<div class="val">600 ₽</div>
+								</div>
+
+								<div class="sep"></div>
+
+								<div class="delete">
+									<button></button>
+								</div>
+							</div>
+
+							<div class="event">
+								<div class="info">
+									<div class="date">11 октября 2020, 10:00 — 12:00</div>
+									<div class="name">Экспозиционный зал</div>
+									<div class="type">льготный Билет</div>
+								</div>
+
+								<div class="sep"></div>
+
+								<div class="price">
+									<div class="title">Цена</div>
+									<div class="val">100 ₽</div>
+								</div>
+
+								<div class="sep"></div>
+
+								<div class="amount">
+									<div class="title">кол-во</div>
+									<div class="val">
+										<input type="text" name="" value="1" class="input">
+									</div>
+								</div>
+
+								<div class="sep"></div>
+
+								<div class="price total">
+									<div class="title">Стоимость</div>
+									<div class="val">100 ₽</div>
+								</div>
+
+								<div class="sep"></div>
+
+								<div class="delete">
+									<button></button>
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<div class="submit">
+						<button type="submit" class="submit_btn">Купить билеты</button>
+					</div>
+				</form>
 			</div>
 		</section>
 
@@ -504,6 +727,9 @@
 		<script src="js/inputmask.min.js"></script>
 		<script src="js/fancybox.min.js"></script>
 		<script src="js/nice-select.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/scrollfix.js"></script>
 		<script src="js/functions.js"></script>
+		<script src="js/scripts.js"></script>
 	</body>
 </html>
