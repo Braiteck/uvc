@@ -109,6 +109,7 @@ button[type=reset]
     --bg: #fff;
     --scroll_width: 17px;
     --aside_width: 255px;
+    --aside_big_width: 310px;
     --text_color: #000;
     --font_size: 16px;
     --font_size_title: 40px;
@@ -445,6 +446,12 @@ body.lock
 }
 
 
+.content_flex.aside_big .content
+{
+    width: calc(100% - var(--aside_big_width) - 45px);
+}
+
+
 
 .block
 {
@@ -453,9 +460,16 @@ body.lock
 
 .block.bg
 {
-    padding: 40px 0;
+    padding: 50px 0;
 
-    background: #e8e8e8;
+    background: #f7f7f7;
+}
+
+.block.bg2
+{
+    padding: 50px 0;
+
+    background: #e4ebee;
 }
 
 .block.no_margin
@@ -492,6 +506,59 @@ body.lock
     line-height: 44px;
 
     text-transform: uppercase;
+}
+
+.block_head.with_link .title
+{
+    max-width: calc(100% - 50px);
+}
+
+.block_head .all_link
+{
+    display: flex;
+
+    width: 30px;
+    height: 29px;
+    margin-left: auto;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.block_head .all_link span
+{
+    position: relative;
+
+    display: block;
+
+    width: 100%;
+    height: 3px;
+
+    background: #005ca1;
+}
+
+.block_head .all_link span:before,
+.block_head .all_link span:after
+{
+    position: relative;
+    top: -8px;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    content: '';
+
+    background: #005ca1;
+}
+
+.block_head .all_link span:after
+{
+    top: 5px;
 }
 
 
@@ -2178,6 +2245,13 @@ aside
     max-width: 100%;
 }
 
+.aside_big aside
+{
+    position: relative;
+
+    width: var(--aside_big_width);
+}
+
 
 aside .block_title
 {
@@ -3408,6 +3482,47 @@ aside .links a.active
 
 
 
+.event_head
+{
+    width: 100%;
+    margin-bottom: 30px;
+}
+
+.event_head .date
+{
+    color: #fff;
+    font-family: var(--font_family2);
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28px;
+
+    display: inline-block;
+
+    height: 28px;
+    margin-bottom: 20px;
+    padding: 0 14px;
+
+    vertical-align: top;
+    white-space: nowrap;
+
+    border-radius: 15px;
+    background: #005ca1;
+}
+
+.event_head .event_name
+{
+    font-family: var(--font_family2);
+    font-size: 30px;
+    font-weight: 500;
+    line-height: 34px;
+
+    display: block;
+
+    text-transform: uppercase;
+}
+
+
+
 .visiting_rules
 {
     padding-top: 17px;
@@ -4387,6 +4502,166 @@ aside .links a.active
 
 
 
+.events .flex
+{
+    margin-bottom: -40px;
+    margin-left: -25px;
+}
+
+.events .flex > *
+{
+    width: calc(33.333% - 25px);
+    margin-bottom: 40px;
+    margin-left: 25px;
+}
+
+
+.events .list > * + *
+{
+    margin-top: 30px;
+}
+
+.events .list .event .thumb
+{
+    min-height: 145px;
+}
+
+
+.events .event .thumb
+{
+    position: relative;
+
+    display: block;
+    overflow: hidden;
+
+    min-height: 130px;
+    padding-bottom: 41.67%;
+
+    background: #005ca1;
+}
+
+.events .event .thumb img
+{
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+.events .event .thumb img.loaded
+{
+    opacity: .9;
+}
+
+.events .event .date
+{
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 28px;
+
+    position: absolute;
+    z-index: 3;
+    bottom: 20px;
+    left: 20px;
+
+    height: 28px;
+    padding: 0 14px;
+
+    border-radius: 15px;
+    background: #005ca1;
+}
+
+.events .event .name
+{
+    color: #005ca1;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 28px;
+
+    margin-top: 20px;
+}
+
+.events .event .name a
+{
+    color: currentColor;
+
+    display: inline-block;
+
+    vertical-align: top;
+    text-decoration: none;
+}
+
+.events .event .thumb:hover ~ .name a,
+.events .event .name a:hover
+{
+    text-decoration: underline;
+}
+
+.events .event .desc
+{
+    color: #222;
+    font-size: 16px;
+    line-height: 28px;
+
+    margin-top: 15px;
+}
+
+
+
+.subscribe_success
+{
+    display: flex;
+
+    min-height: 540px;
+    padding: 60px 0;
+
+    text-align: center;
+
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.subscribe_success .title
+{
+    color: #00a14c;
+    font-size: 30px;
+    font-weight: 700;
+    line-height: 40px;
+
+    text-transform: uppercase;
+}
+
+.subscribe_success .desc
+{
+    color: #050505;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 30px;
+
+    margin-top: 35px;
+}
+
+.subscribe_success .desc a
+{
+    color: #005ca1;
+}
+
+.subscribe_success .desc a:hover
+{
+    text-decoration: none;
+}
+
+
+
 .grid_lines
 {
     position: absolute;
@@ -4688,11 +4963,44 @@ footer .creator a:hover
     border-width: 2px;
 }
 
+#calendar_order_modal .form .bottom
+{
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+#calendar_order_modal .form .agree
+{
+    color: #6f6f6f;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: 18px;
+
+    width: 310px;
+    max-width: 100%;
+
+    text-transform: uppercase;
+}
+
+#calendar_order_modal .form .agree a
+{
+    color: #005ca1;
+
+    text-decoration: none;
+}
+
+#calendar_order_modal .form .agree a:hover
+{
+    text-decoration: underline;
+}
+
 #calendar_order_modal .form .submit
 {
     padding: 0;
-
-    justify-content: flex-end;
 }
 
 #calendar_order_modal .form .submit_btn

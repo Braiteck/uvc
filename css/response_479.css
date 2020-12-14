@@ -533,6 +533,56 @@
 
 
 
+    .events .flex > *,
+    .events .list > *
+    {
+        width: calc(100% - 20px);
+    }
+
+    .events .event .thumb
+    {
+        padding-bottom: 41.67%;
+    }
+
+
+
+    .event_head .date
+    {
+        margin-bottom: 15px;
+    }
+
+    .event_head .event_name
+    {
+        font-size: 24px;
+        line-height: 28px;
+    }
+
+
+
+    .subscribe_success
+    {
+        min-height: 320px;
+    }
+
+    .subscribe_success .title
+    {
+        font-size: 22px;
+        line-height: 30px;
+    }
+
+    .subscribe_success .desc
+    {
+        font-size: 14px;
+        line-height: 20px;
+    }
+
+    .subscribe_success .desc br
+    {
+        display: none;
+    }
+
+
+
     .load_more
     {
         margin-top: 30px;

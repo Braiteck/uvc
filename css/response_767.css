@@ -711,6 +711,50 @@
 
 
 
+    .events .flex > *
+    {
+        width: calc(50% - 20px);
+    }
+
+    .events .event .date
+    {
+        font-size: 12px;
+        line-height: 24px;
+
+        height: 24px;
+    }
+
+    .events .event .name
+    {
+        margin-top: 15px;
+    }
+
+    .events .event .desc
+    {
+        font-size: 14px;
+        line-height: 20px;
+
+        margin-top: 10px;
+    }
+
+
+
+    .subscribe_success .title
+    {
+        font-size: 24px;
+        line-height: 32px;
+    }
+
+    .subscribe_success .desc
+    {
+        font-size: 15px;
+        line-height: 21px;
+
+        margin-top: 20px;
+    }
+
+
+
     .grid_lines .line
     {
         width: 25%;
@@ -818,6 +862,14 @@
     {
         padding: 40px;
     }
+
+
+    #calendar_order_modal .form .agree
+    {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
 
     #calendar_order_modal .order_info .event
     {

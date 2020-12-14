@@ -6,6 +6,7 @@
     :root
     {
         --aside_width: 240px;
+        --aside_big_width: 280px;
         --font_size: 15px;
         --font_size_title: 36px;
     }
@@ -44,6 +45,11 @@
     .content_flex .content
     {
         width: calc(100% - var(--aside_width) - 30px);
+    }
+
+    .content_flex.aside_big .content
+    {
+        width: calc(100% - var(--aside_big_width) - 30px);
     }
 
 
@@ -573,6 +579,27 @@
     {
         margin-top: 25px;
         padding: 0 25px;
+    }
+
+
+
+    .events .flex
+    {
+        margin-left: -20px;
+    }
+
+    .events .flex > *
+    {
+        width: calc(33.333% - 20px);
+        margin-left: 20px;
+    }
+
+
+    .events .event .name,
+    .events .event .desc
+    {
+        font-size: 15px;
+        line-height: 21px;
     }
 
 
